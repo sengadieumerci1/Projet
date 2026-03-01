@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion de Projet - Contact</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4;}
+header, footer {background:#007bff; color:white; text-align:center; padding:20px;}
+nav {background:#0056b3; display:flex; justify-content:center; flex-wrap:wrap;}
+nav a {color:white; padding:14px 20px; text-decoration:none;}
+nav a:hover {background:#004494;}
+main {padding:20px;}
+.card {background:white; padding:20px; margin:20px 0; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+input, textarea, button {width:100%; padding:10px; margin:5px 0; border-radius:4px; border:1px solid #ccc;}
+button {background:#007bff; color:white; border:none; cursor:pointer;}
+button:hover {background:#0056b3;}
+@media(max-width:600px){nav a{flex:100%; text-align:center;}}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Contact</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="taches.html">Tâches</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>Formulaire de Contact</h2>
+        <input type="text" id="nom" placeholder="Votre nom" />
+        <input type="email" id="email" placeholder="Votre email" />
+        <textarea id="message" placeholder="Votre message"></textarea>
+        <button onclick="envoyerMessage()">Envoyer</button>
+        <p id="confirmation" style="color:green;"></p>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 Gestion de Projet
+</footer>
+
+<script>
+function envoyerMessage(){
+    const nom = document.getElementById("nom").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    if(nom && email && message){
+        document.getElementById("confirmation").textContent = "Merci " + nom + ", votre message a été envoyé !";
+        document.getElementById("nom").value="";
+        document.getElementById("email").value="";
+        document.getElementById("message").value="";
+    } else {
+        alert("Veuillez remplir tous les champs.");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion de Projet - Accueil</title>
+<style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4;}
+    header {background:#007bff; color:white; padding:20px; text-align:center;}
+    nav {background:#0056b3; display:flex; justify-content:center; flex-wrap:wrap;}
+    nav a {color:white; padding:14px 20px; text-decoration:none;}
+    nav a:hover {background:#004494;}
+    main {padding:20px;}
+    .card {background:white; padding:20px; margin:20px 0; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+    footer {background:#007bff; color:white; text-align:center; padding:10px;}
+    @media(max-width:600px){nav a{flex:100%; text-align:center;}}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Gestion de Projet</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="taches.html">Tâches</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>Bienvenue sur le Tableau de Bord</h2>
+        <p>Gérez vos projets, suivez les tâches et collaborez avec votre équipe efficacement.</p>
+    </div>
+    <div class="card">
+        <h3>Derniers Projets</h3>
+        <ul id="dernierProjets">
+            <li>Projet Alpha</li>
+            <li>Projet Beta</li>
+            <li>Projet Gamma</li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 Gestion de Projet
+</footer>
+
+<script>
+    // Exemple JS simple : ajouter un nouveau projet
+    const projets = ["Projet Alpha", "Projet Beta", "Projet Gamma"];
+    const ul = document.getElementById("dernierProjets");
+    projets.push("Projet Delta");
+    const li = document.createElement("li");
+    li.textContent = "Projet Delta";
+    ul.appendChild(li);
+</script>
+
+</body>
+</html>
